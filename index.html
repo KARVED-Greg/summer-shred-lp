@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>60 Day Summer Shred | KARVED</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   KARVED 60 DAY SUMMER SHRED — LANDING PAGE
+   Brand: Navy Deep + Gold Accent System
+   Fonts: Norwester (headings) + Montserrat (body)
+   ============================================ */
+
+@font-face {
+  font-family: 'Norwester';
+  src: url('https://cdn.jsdelivr.net/gh/AugustRush/font@master/Norwester-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --navy-deep: #0D1129;
+  --carbon-black: #080808;
+  --navy-mid: #111828;
+  --gold-mid: #C4A44A;
+  --gold-light: #E8D5A3;
+  --white: #FFFFFF;
+  --warm-grey: #B8B0A0;
+  --muted-bronze: #6A6458;
+  --warm-cream: #F5F0E8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--navy-deep);
+  color: var(--warm-grey);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-mid), var(--gold-light));
+  margin: 0 auto 24px;
+}
+
+.gold-line-left {
+  margin: 0 0 24px 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Norwester', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.1; }
+h2 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin-bottom: 16px; }
+h3 { font-size: clamp(18px, 2.5vw, 24px); line-height: 1.3; }
+
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--navy-mid);
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  color: var(--navy-deep);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(196, 164, 74, 0.3);
+}
+
+.cta-btn-outline {
+  background: transparent;
+  border: 2px solid var(--gold-mid);
+  color: var(--gold-light);
+  clip-path: none;
+}
+
+.cta-btn-outline:hover {
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  color: var(--navy-deep);
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+}
+
+/* Hexagon decorative element */
+.hex-accent {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: inline-block;
+}
+
+/* ============================================
+   SECTION 1: ABOVE THE FOLD — HERO
+   Version: Aggressive/Direct (Hot traffic)
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--carbon-black);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(196, 164, 74, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(13, 17, 41, 0.9) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.hero .eyebrow {
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--warm-grey);
+  margin-bottom: 12px;
+  font-weight: 300;
+  max-width: 560px;
+}
+
+.hero-bullets {
+  list-style: none;
+  margin: 24px 0 36px;
+}
+
+.hero-bullets li {
+  padding: 6px 0;
+  font-size: 16px;
+  color: var(--warm-grey);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-bullets li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  flex-shrink: 0;
+}
+
+.hero-image-placeholder {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(13, 17, 41, 0) 0%, var(--carbon-black) 100%);
+  z-index: 1;
+}
+
+/* Photo placeholder styling */
+.photo-placeholder {
+  background: var(--navy-mid);
+  border: 1px dashed var(--muted-bronze);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-bronze);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   SECTION 2: USP / CREDIBILITY BANNER
+   ============================================ */
+.usp-banner {
+  background: var(--navy-mid);
+  border-top: 1px solid rgba(196, 164, 74, 0.15);
+  border-bottom: 1px solid rgba(196, 164, 74, 0.15);
+  padding: 32px 0;
+}
+
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 32px;
+  text-align: center;
+}
+
+.usp-item {
+  padding: 8px;
+}
+
+.usp-number {
+  font-family: 'Norwester', 'Montserrat', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.usp-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--warm-grey);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ============================================
+   SECTION 3: PROBLEM ACKNOWLEDGMENT PANEL
+   Version: Emotional/Story-Driven
+   ============================================ */
+.problem-panel .container {
+  max-width: 900px;
+}
+
+.problem-intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.problem-intro p {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.feature-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.feature-box {
+  background: var(--navy-mid);
+  padding: 36px 28px;
+  border-left: 3px solid var(--gold-mid);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+}
+
+.feature-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.feature-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--warm-grey);
+}
+
+/* ============================================
+   SECTION 4: TRANSFORMATION STORY PANEL
+   ============================================ */
+.transformation-panel {
+  text-align: center;
+}
+
+.transformation-panel .check-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 32px auto;
+  text-align: left;
+}
+
+.transformation-panel .check-list li {
+  padding: 10px 0;
+  font-size: 17px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--warm-grey);
+}
+
+.check-icon {
+  color: var(--gold-light);
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.vision-text {
+  max-width: 700px;
+  margin: 32px auto 40px;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--warm-grey);
+  line-height: 1.7;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  padding: 24px 16px;
+  text-align: center;
+  border: 1px solid rgba(196, 164, 74, 0.12);
+  transition: border-color 0.3s;
+}
+
+.benefit-item:hover {
+  border-color: rgba(196, 164, 74, 0.35);
+}
+
+.benefit-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.benefit-item span:last-child {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold-light);
+}
+
+/* ============================================
+   SECTION 5: LONG-FORM STORY LEAD
+   Version: Personal Story
+   ============================================ */
+.story-section .container {
+  max-width: 800px;
+}
+
+.story-section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.story-content {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--warm-grey);
+}
+
+.story-content p {
+  margin-bottom: 20px;
+}
+
+.story-content .story-reveal {
+  padding: 24px 0;
+}
+
+.story-content .story-reveal li {
+  list-style: none;
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.story-content .story-reveal li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold-light);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: absolute;
+  left: 0;
+  top: 16px;
+}
+
+.story-highlight {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.founder-card {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin: 40px 0;
+  padding: 32px;
+  background: var(--navy-mid);
+  border-left: 3px solid var(--gold-mid);
+}
+
+.founder-photo {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.founder-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.founder-info .founder-title {
+  font-size: 13px;
+  color: var(--muted-bronze);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.founder-info p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   SECTION 6: HOW IT WORKS
+   Version: Speed + Results Focus
+   ============================================ */
+.how-it-works {
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.step {
+  padding: 40px 28px;
+  position: relative;
+  background: var(--navy-deep);
+  border: 1px solid rgba(196, 164, 74, 0.1);
+}
+
+.step-number {
+  font-family: 'Norwester', 'Montserrat', sans-serif;
+  font-size: 64px;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.step h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.step p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--warm-grey);
+}
+
+.step-connector {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .step-connector {
+    display: block;
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    z-index: 2;
+  }
+}
+
+/* ============================================
+   SECTION 7: WHAT WE DO — 5 SERVICE BOXES
+   Version: Benefit-Focused
+   ============================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.service-box {
+  background: var(--navy-mid);
+  padding: 32px 24px;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  border-bottom-color: var(--gold-mid);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.service-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.service-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--warm-grey);
+}
+
+/* ============================================
+   SECTION 8: 8 REASONS WHY
+   Version: Benefit-Focused + Differentiation
+   ============================================ */
+.reasons-section h2 {
+  text-align: center;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (max-width: 540px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reason {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: var(--navy-deep);
+  border-left: 2px solid rgba(196, 164, 74, 0.2);
+  transition: border-color 0.3s;
+}
+
+.reason:hover {
+  border-left-color: var(--gold-mid);
+}
+
+.reason-num {
+  font-family: 'Norwester', 'Montserrat', sans-serif;
+  font-size: 32px;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.reason-content strong {
+  color: var(--white);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.reason-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--warm-grey);
+  margin: 0;
+}
+
+/* ============================================
+   SECTION 9: SOCIAL PROOF / TESTIMONIALS
+   ============================================ */
+.social-proof {
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.testimonial {
+  background: var(--navy-deep);
+  padding: 36px 28px;
+  text-align: left;
+  position: relative;
+  border: 1px solid rgba(196, 164, 74, 0.08);
+}
+
+.testimonial::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 72px;
+  color: var(--gold-mid);
+  opacity: 0.3;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--warm-grey);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  font-style: normal;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.testimonial-detail {
+  font-size: 12px;
+  color: var(--muted-bronze);
+}
+
+/* ============================================
+   SECTION 10: FAQ
+   ============================================ */
+.faq-section .container {
+  max-width: 800px;
+}
+
+.faq-section h2 {
+  text-align: center;
+}
+
+.faq-list {
+  margin-top: 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(196, 164, 74, 0.1);
+  padding: 24px 0;
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 24px;
+  color: var(--gold-light);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--warm-grey);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding-top: 16px;
+}
+
+/* ============================================
+   SECTION 11: GUARANTEE
+   ============================================ */
+.guarantee-section {
+  text-align: center;
+}
+
+.guarantee-box {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  background: var(--navy-deep);
+  border: 1px solid rgba(196, 164, 74, 0.2);
+  position: relative;
+}
+
+.guarantee-box::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-mid), var(--gold-light));
+}
+
+.guarantee-badge {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Norwester', 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: var(--navy-deep);
+  text-transform: uppercase;
+}
+
+.guarantee-box h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.guarantee-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--warm-grey);
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   SECTION 12: COMPARISON TABLE
+   Version: Method Comparison
+   ============================================ */
+.comparison-section h2 {
+  text-align: center;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.comparison-table thead th {
+  padding: 20px 16px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(196, 164, 74, 0.2);
+}
+
+.comparison-table thead th:first-child {
+  text-align: left;
+}
+
+.comparison-table thead th.highlight {
+  color: var(--gold-light);
+  background: rgba(196, 164, 74, 0.05);
+}
+
+.comparison-table tbody td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--warm-grey);
+}
+
+.comparison-table tbody td:first-child {
+  text-align: left;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.comparison-table tbody td.highlight {
+  background: rgba(196, 164, 74, 0.03);
+}
+
+.check-yes {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.check-no {
+  color: var(--muted-bronze);
+  opacity: 0.5;
+}
+
+/* ============================================
+   SECTION 13: "FOR YOU IF" PANEL
+   Version: Past Pain Focused
+   ============================================ */
+.for-you-section h2 {
+  text-align: center;
+}
+
+.segments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.segment {
+  padding: 32px;
+  background: var(--navy-deep);
+  border-left: 3px solid var(--gold-mid);
+}
+
+.segment h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.segment p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--warm-grey);
+}
+
+/* ============================================
+   SECTION 14: URGENCY PANEL
+   Version: Crossroads
+   ============================================ */
+.urgency-section {
+  background: var(--carbon-black);
+  text-align: center;
+}
+
+.urgency-section h2 {
+  margin-bottom: 24px;
+}
+
+.urgency-section .eyebrow {
+  color: var(--gold-light);
+}
+
+.urgency-bullets {
+  list-style: none;
+  max-width: 600px;
+  margin: 32px auto;
+  text-align: left;
+}
+
+.urgency-bullets li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: var(--warm-grey);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.urgency-bullets li .check-icon {
+  color: var(--gold-light);
+}
+
+.urgency-text {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--warm-grey);
+}
+
+/* ============================================
+   SECTION 15: FINAL CTA
+   Version: Value Stack
+   ============================================ */
+.final-cta {
+  text-align: center;
+  background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+  padding: 100px 0;
+}
+
+.final-cta h2 {
+  margin-bottom: 20px;
+}
+
+.final-cta .sub-headline {
+  font-size: 18px;
+  color: var(--warm-grey);
+  max-width: 600px;
+  margin: 0 auto 32px;
+  font-weight: 300;
+}
+
+.value-stack {
+  max-width: 560px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.value-stack li {
+  list-style: none;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--warm-grey);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.value-stack li .check-icon {
+  color: var(--gold-light);
+}
+
+.final-cta .scarcity-note {
+  font-size: 14px;
+  color: var(--muted-bronze);
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* ============================================
+   SECTION 16: FOOTER
+   ============================================ */
+.footer {
+  background: var(--carbon-black);
+  padding: 48px 0 32px;
+  text-align: center;
+  border-top: 1px solid rgba(196, 164, 74, 0.1);
+}
+
+.footer-logo {
+  font-family: 'Norwester', 'Montserrat', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--warm-grey);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--gold-light);
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--muted-bronze);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .hero { min-height: auto; padding: 120px 0 80px; }
+  .founder-card { flex-direction: column; text-align: center; }
+  .founder-photo { margin: 0 auto; }
+  .usp-grid { grid-template-columns: repeat(2, 1fr); }
+  .comparison-table { font-size: 13px; }
+  .comparison-table thead th,
+  .comparison-table tbody td { padding: 12px 8px; }
+  .reasons-grid { grid-template-columns: 1fr; }
+  .final-cta { padding: 80px 0; }
+}
+
+@media (max-width: 480px) {
+  .usp-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+/* Sticky CTA for mobile */
+@media (max-width: 768px) {
+  .mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px;
+    background: var(--carbon-black);
+    border-top: 1px solid rgba(196, 164, 74, 0.2);
+    z-index: 100;
+    text-align: center;
+  }
+  .mobile-sticky-cta .cta-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  body { padding-bottom: 70px; }
+}
+
+@media (min-width: 769px) {
+  .mobile-sticky-cta { display: none; }
+}
+
+/* Mid-page CTA bar */
+.mid-cta-bar {
+  background: var(--navy-mid);
+  padding: 48px 0;
+  text-align: center;
+  border-top: 1px solid rgba(196, 164, 74, 0.08);
+  border-bottom: 1px solid rgba(196, 164, 74, 0.08);
+}
+
+.mid-cta-bar p {
+  font-size: 18px;
+  color: var(--warm-grey);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================
+     SECTION 1: ABOVE THE FOLD — HERO
+     ============================================ -->
+<section class="hero" id="top">
+  <div class="container hero-content">
+    <div class="eyebrow">For athletes who refuse to let their best body stay buried</div>
+    <h1>
+      <span>Your muscle is there.</span>
+      <span class="gold-gradient-text">60 days to make</span>
+      <span class="gold-gradient-text">everyone see it.</span>
+    </h1>
+    <p class="hero-sub">
+      The Summer Shred is a 60-day precision fat-loss program built for men who already have the foundation — you just need the structure, accountability, and expert eye to strip back what's hiding it.
+    </p>
+    <ul class="hero-bullets">
+      <li>Personalised programming with KARVED founder Greg, 12 years deep</li>
+      <li>Built for ex-athletes and competitive lifters ready to look the part again</li>
+      <li>Structured nutrition, weekly check-ins, and zero guesswork</li>
+      <li>Limited intake — your spot is confirmed on your strategy call</li>
+    </ul>
+    <a href="#book" class="cta-btn">Book Your Strategy Call</a>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 2: USP / CREDIBILITY BANNER
+     ============================================ -->
+<section class="usp-banner">
+  <div class="container">
+    <div class="usp-grid">
+      <div class="usp-item">
+        <div class="usp-number">12+</div>
+        <div class="usp-label">Years Coaching</div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-number">500+</div>
+        <div class="usp-label">Transformations</div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-number">60</div>
+        <div class="usp-label">Day Program</div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-number">1:1</div>
+        <div class="usp-label">With The Founder</div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-number">100%</div>
+        <div class="usp-label">Personalised</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: PROBLEM ACKNOWLEDGMENT PANEL
+     ============================================ -->
+<section class="section problem-panel">
+  <div class="container">
+    <div class="problem-intro">
+      <div class="eyebrow">We get it</div>
+      <h2>You've done the hard part.<br><span class="gold-gradient-text">Your body just doesn't show it yet.</span></h2>
+      <p>
+        You trained hard for years. Rugby, athletics, bodybuilding — whatever your arena, you built something real. But somewhere between career, commitments, and life getting in the way, the physique that matched your effort disappeared under layers you never planned for. The muscle is still there. It just needs to be uncovered.
+      </p>
+    </div>
+    <div class="feature-boxes">
+      <div class="feature-box">
+        <h3>Lost definition, not strength</h3>
+        <p>Your lifts are still respectable. Your cardio is manageable. But the mirror tells a different story than your training log. The Summer Shred bridges that gap — precision fat loss that reveals what you've already built, without stripping your hard-earned muscle.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Overwhelmed by conflicting advice</h3>
+        <p>Every app, influencer, and meal plan contradicts the last. You don't need more information — you need a structured protocol from someone who has competed at the highest level and coached hundreds through exactly this transformation.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Accountability, not another PDF</h3>
+        <p>You've downloaded the guides. You've started and stopped. What you haven't had is someone in your corner, checking your progress weekly, adjusting in real time, and holding you to the standard you set for yourself. That changes here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 4: TRANSFORMATION STORY PANEL
+     ============================================ -->
+<section class="section section-alt transformation-panel">
+  <div class="container">
+    <div class="eyebrow">The KARVED difference</div>
+    <h2>Most programs sell a template.<br><span class="gold-gradient-text">We engineer your transformation.</span></h2>
+    <p style="color: var(--warm-grey); font-size: 17px; max-width: 640px; margin: 0 auto;">
+      Generic programs treat every body the same. At KARVED, we strike the perfect balance between structure and personalisation — because the guy who played rugby for 15 years needs a fundamentally different approach than someone coming from bodybuilding.
+    </p>
+    <ul class="check-list">
+      <li><span class="check-icon">&#10070;</span> Nutrition calibrated to your metabolism, training history, and 60-day target</li>
+      <li><span class="check-icon">&#10070;</span> Training programmed around your schedule, equipment, and weak points</li>
+      <li><span class="check-icon">&#10070;</span> Weekly 1:1 check-ins with Greg — not a junior coach, not an AI</li>
+    </ul>
+    <p class="vision-text">
+      Picture yourself 60 days from now. The shirt fits differently. The confidence is back. You catch a glimpse in the mirror and for the first time in years, what you see matches who you know you are. That version of you isn't aspirational — it's 60 days of structured effort away.
+    </p>
+    <div class="benefit-grid">
+      <div class="benefit-item">
+        <span class="benefit-icon">&#9670;</span>
+        <span>Custom Nutrition</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">&#9670;</span>
+        <span>1:1 Coaching</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">&#9670;</span>
+        <span>Weekly Check-Ins</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">&#9670;</span>
+        <span>Progress Tracking</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">&#9670;</span>
+        <span>Community Access</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">&#9670;</span>
+        <span>Resource Portal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 5: LONG-FORM STORY LEAD (FOUNDER)
+     Version: Personal Story
+     ============================================ -->
+<section class="section story-section">
+  <div class="container">
+    <h2>I built this program because <span class="gold-gradient-text">I've lived it</span></h2>
+    <div class="story-content">
+      <p>
+        Twelve years ago I was the guy in the gym with all the muscle and none of the definition. Competitive rugby had given me size, power, and a foundation most people spend years chasing. But when I stepped away from the field, I realised something confronting — I looked nothing like someone who trained as hard as I did.
+      </p>
+      <p>
+        That gap between effort and appearance became my obsession. I stepped into competitive bodybuilding, studied exercise science, and spent over a decade refining the exact protocols that strip fat while preserving the muscle athletes like us spend years building.
+      </p>
+      <ul class="story-reveal">
+        <li>Most fat-loss programs are built for beginners — they don't account for an athletic training history or existing muscle mass</li>
+        <li>Cookie-cutter nutrition targets leave experienced lifters under-fuelled and losing the wrong kind of weight</li>
+        <li>Without weekly accountability and real-time adjustments, even the best program fails at week three</li>
+      </ul>
+      <p>
+        The 60 Day Summer Shred exists because I got tired of watching capable, strong men spin their wheels on programs that weren't designed for them. <span class="story-highlight">Your body is different. Your program should be too.</span>
+      </p>
+      <div class="founder-card">
+        <div class="founder-photo photo-placeholder" style="background: var(--navy-mid);">
+          <!-- YOUR PHOTO HERE -->
+        </div>
+        <div class="founder-info">
+          <h3>Greg Lynn Gard</h3>
+          <div class="founder-title">Founder, KARVED</div>
+          <p>Competitive bodybuilder. Former rugby player. 12+ years coaching athletes and driven men to the leanest, strongest versions of themselves. Over 500 transformations delivered.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MID-PAGE CTA BAR
+     ============================================ -->
+<div class="mid-cta-bar">
+  <div class="container">
+    <p>Ready to see what 60 days of precision coaching can do?</p>
+    <a href="#book" class="cta-btn">Book Your Free Strategy Call</a>
+  </div>
+</div>
+
+<!-- ============================================
+     SECTION 6: HOW IT WORKS
+     ============================================ -->
+<section class="section section-alt how-it-works">
+  <div class="container">
+    <div class="eyebrow">Your path to shredded</div>
+    <h2>Three steps. <span class="gold-gradient-text">60 days. Your transformation.</span></h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Book your strategy call</h3>
+        <p>A 20-minute call with Greg to map your 60-day targets. We'll assess your current physique, training history, and what "shredded" looks like for you specifically. No obligation — just clarity on what's possible and how fast you can get there.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Receive your custom protocol</h3>
+        <p>Within 48 hours of starting, you'll have your personalised training program, nutrition targets calibrated to your metabolism, and full access to the KARVED athlete community and resource portal. Everything built for you, not borrowed from a template.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Execute, check in, transform</h3>
+        <p>Weekly 1:1 check-ins keep you progressing. We adjust nutrition and training in real time based on your results — not guesswork, not "wait and see." In 60 days, the muscle you've built for years is finally visible to everyone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 7: WHAT WE DO — SERVICE BOXES
+     ============================================ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="eyebrow">What you get</div>
+      <h2>Everything engineered <span class="gold-gradient-text">for your result</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-box">
+        <span class="service-icon">&#9670;</span>
+        <h3>Personalised training</h3>
+        <p>Programming built around your body, schedule, equipment, and goals. Adjusted weekly based on performance and recovery.</p>
+      </div>
+      <div class="service-box">
+        <span class="service-icon">&#9670;</span>
+        <h3>Calibrated nutrition</h3>
+        <p>Macros and meal structure designed for fat loss without muscle sacrifice. No generic calorie cuts — precision fuelling.</p>
+      </div>
+      <div class="service-box">
+        <span class="service-icon">&#9670;</span>
+        <h3>Weekly 1:1 check-ins</h3>
+        <p>Direct access to Greg every week. Progress photos, metrics review, real-time adjustments. No juniors, no chatbots.</p>
+      </div>
+      <div class="service-box">
+        <span class="service-icon">&#9670;</span>
+        <h3>Athlete community</h3>
+        <p>Join the KARVED Athlete Community. Surround yourself with driven men pursuing the same standard you are.</p>
+      </div>
+      <div class="service-box">
+        <span class="service-icon">&#9670;</span>
+        <h3>Resource portal + playbook</h3>
+        <p>Full access to the KARVED resource portal, health playbook, and welcome pack including custom shaker and gear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 8: 8 REASONS WHY
+     ============================================ -->
+<section class="section section-alt reasons-section">
+  <div class="container">
+    <div class="eyebrow">Why KARVED</div>
+    <h2>8 reasons athletes choose <span class="gold-gradient-text">the Summer Shred</span></h2>
+    <div class="reasons-grid">
+      <div class="reason">
+        <div class="reason-num">1</div>
+        <div class="reason-content">
+          <strong>Visible results within the first 14 days</strong>
+          <p>Your body responds fast when the protocol matches your physiology. Most clients see measurable changes by week two — not month two.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-num">2</div>
+        <div class="reason-content">
+          <strong>Built for athletes, not beginners</strong>
+          <p>Your training history is an asset, not an afterthought. This program leverages your existing muscle mass and work capacity.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-num">3</div>
+        <div class="reason-content">
+          <strong>500+ transformations and counting</strong>
+          <p>This isn't theory. It's a proven system refined over 12 years and hundreds of real-world results from men like you.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-num">4</div>
+        <div class="reason-content">
+          <strong>No templates — everything is personalised</strong>
+          <p>Your nutrition, training, and progression are built for your body. Adjustments happen weekly based on real data, not assumptions.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-num">5</div>
+        <div class="reason-content">
+          <strong>Direct access to the founder, every week</strong>
+          <p>Greg coaches you personally. Competitive bodybuilder, former rugby player, and the person who built every protocol in this system.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-num">6</div>
+        <div class="reason-content">
+          <strong>Your investment is protected by results</strong>
+          <p>If you follow the program and don't see measurable progress, we will work with you until you do. Your outcome is the only metric that matters.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-num">7</div>
+        <div class="reason-content">
+          <strong>Accountability that actually works</strong>
+          <p>Weekly check-ins, progress tracking, and real-time adjustments mean you can't quietly fall off. The structure keeps you moving.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-num">8</div>
+        <div class="reason-content">
+          <strong>More than fat loss — total transformation</strong>
+          <p>Confidence, energy, performance, and appearance all shift when your body composition changes. This program recalibrates everything.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 9: SOCIAL PROOF
+     ============================================ -->
+<section class="section social-proof">
+  <div class="container">
+    <div class="eyebrow">Results speak</div>
+    <h2>See why athletes trust <span class="gold-gradient-text">KARVED to deliver</span></h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">"I'd been training for 10 years and genuinely thought I knew what I was doing nutritionally. Greg showed me exactly where I was leaving results on the table. 8 weeks in and I've never looked this lean while keeping my strength."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar photo-placeholder" style="background: var(--navy-mid);"></div>
+          <div>
+            <div class="testimonial-name">Client Testimonial</div>
+            <div class="testimonial-detail">— Replace with real client name and result</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"Former rugby player, desk job for 5 years, and 15kg heavier than I wanted to be. Greg didn't just give me a diet — he gave me a system. The weekly check-ins were the difference. I actually stuck with it this time."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar photo-placeholder" style="background: var(--navy-mid);"></div>
+          <div>
+            <div class="testimonial-name">Client Testimonial</div>
+            <div class="testimonial-detail">— Replace with real client name and result</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"The best investment I've made in myself. Having someone who's competed at a high level personally coaching you changes the game. Greg's eye for detail on check-ins caught things I would have missed for months."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar photo-placeholder" style="background: var(--navy-mid);"></div>
+          <div>
+            <div class="testimonial-name">Client Testimonial</div>
+            <div class="testimonial-detail">— Replace with real client name and result</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Transformation photo strip placeholder -->
+    <div style="margin-top: 48px; padding: 40px; background: var(--navy-mid); text-align: center; border: 1px dashed var(--muted-bronze);">
+      <p style="color: var(--muted-bronze); font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">Before / After Transformation Photos — Add Your Client Results Here</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 10: FAQ
+     ============================================ -->
+<section class="section section-alt faq-section">
+  <div class="container">
+    <div class="eyebrow">Common questions</div>
+    <h2>Everything you need <span class="gold-gradient-text">to know</span></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">What's the investment for the 60 Day Summer Shred?</div>
+        <div class="faq-answer">Your strategy call will confirm exact pricing based on your situation. KARVED programs are a premium investment in personalised coaching — not a subscription to a template app. We'll discuss everything transparently on the call so there are no surprises.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How quickly will I see results?</div>
+        <div class="faq-answer">Most clients notice visible changes within the first 14 days — tighter midsection, better muscle definition, and improved energy. By day 30, the changes are obvious to others. By day 60, you're looking at a legitimate before-and-after transformation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I know this is right for me?</div>
+        <div class="faq-answer">If you've been training consistently, have existing muscle mass, and your main frustration is that your physique doesn't reflect your effort — this was built for you. The strategy call exists to confirm fit before you commit a cent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How is this different from other coaching programs?</div>
+        <div class="faq-answer">You work directly with Greg — a competitive bodybuilder and former rugby player with 12 years of coaching experience. No junior coaches, no AI-generated plans, no recycled templates. Every protocol is built from scratch for your body and adjusted weekly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What if it doesn't work for me?</div>
+        <div class="faq-answer">If you follow the program as prescribed and don't see measurable results, we continue working with you beyond the 60 days at no extra cost. Your transformation is the only outcome we're interested in — not just collecting a payment.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">I've tried other programs before and they didn't stick.</div>
+        <div class="faq-answer">That's exactly why weekly 1:1 check-ins exist. Most programs fail because there's no accountability and no adjustment. When someone is reviewing your progress every seven days, you don't quietly fall off — and the program evolves as you do.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What if I don't have time to train every day?</div>
+        <div class="faq-answer">You don't need to. Your training program is built around your real schedule — whether that's 3 sessions a week or 6. The programming is designed for maximum result per hour invested, not maximum hours in the gym.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I know the results are actually achievable?</div>
+        <div class="faq-answer">Over 500 transformations across 12 years. Greg has coached men from desk-bound ex-athletes to competition-ready physiques. The strategy call lets you see real results from people in your exact situation before you commit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What exactly happens after I book the call?</div>
+        <div class="faq-answer">You'll receive a confirmation with your call time. On the call, Greg maps your current physique, your 60-day target, and exactly how the program will get you there. If it's a fit, you're onboarded within 48 hours with your full custom protocol.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 11: GUARANTEE
+     ============================================ -->
+<section class="section guarantee-section">
+  <div class="container">
+    <div class="guarantee-box">
+      <div class="guarantee-badge">60<br>DAYS</div>
+      <h3>Measurable progress in 60 days <span class="gold-gradient-text">or we keep coaching you free</span></h3>
+      <p>Committing to a transformation program requires trust. We understand that.</p>
+      <p>That's why the Summer Shred is backed by a simple commitment: follow the program, complete your check-ins, and if you don't see measurable, visible progress — we continue coaching you at no additional cost until you do.</p>
+      <p>Your result is the product. Not your payment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 12: COMPARISON TABLE
+     Version: Method Comparison
+     ============================================ -->
+<section class="section section-alt comparison-section">
+  <div class="container">
+    <div class="eyebrow">See the difference</div>
+    <h2>Why the Summer Shred <span class="gold-gradient-text">outperforms the rest</span></h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="highlight">KARVED Summer Shred</th>
+          <th>Generic Online Coach</th>
+          <th>DIY / App-Based</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Personalisation</td>
+          <td class="highlight"><span class="check-yes">&#10070; Fully custom</span></td>
+          <td><span class="check-no">&#10005; Template tweaks</span></td>
+          <td><span class="check-no">&#10005; One-size-fits-all</span></td>
+        </tr>
+        <tr>
+          <td>Coach access</td>
+          <td class="highlight"><span class="check-yes">&#10070; Founder, weekly</span></td>
+          <td><span class="check-no">&#10005; Junior coach</span></td>
+          <td><span class="check-no">&#10005; None</span></td>
+        </tr>
+        <tr>
+          <td>Weekly adjustments</td>
+          <td class="highlight"><span class="check-yes">&#10070; Data-driven</span></td>
+          <td><span class="check-no">&#10005; Monthly at best</span></td>
+          <td><span class="check-no">&#10005; Self-managed</span></td>
+        </tr>
+        <tr>
+          <td>Built for athletes</td>
+          <td class="highlight"><span class="check-yes">&#10070; Athlete-specific</span></td>
+          <td><span class="check-no">&#10005; Beginner-focused</span></td>
+          <td><span class="check-no">&#10005; Generic</span></td>
+        </tr>
+        <tr>
+          <td>Accountability</td>
+          <td class="highlight"><span class="check-yes">&#10070; 1:1 check-ins</span></td>
+          <td><span class="check-no">&#10005; Group chats</span></td>
+          <td><span class="check-no">&#10005; Self-motivation</span></td>
+        </tr>
+        <tr>
+          <td>Guarantee</td>
+          <td class="highlight"><span class="check-yes">&#10070; Results-backed</span></td>
+          <td><span class="check-no">&#10005; No refund</span></td>
+          <td><span class="check-no">&#10005; Cancel anytime</span></td>
+        </tr>
+        <tr>
+          <td>Community</td>
+          <td class="highlight"><span class="check-yes">&#10070; Curated athletes</span></td>
+          <td><span class="check-no">&#10005; Mass Facebook group</span></td>
+          <td><span class="check-no">&#10005; None</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 13: "FOR YOU IF" PANEL
+     ============================================ -->
+<section class="section for-you-section">
+  <div class="container">
+    <div class="eyebrow">Is this you?</div>
+    <h2>The Summer Shred is <span class="gold-gradient-text">built for you if...</span></h2>
+    <div class="segments">
+      <div class="segment">
+        <h3>You've been training for years but your body doesn't show it</h3>
+        <p>You're stronger than most people in your gym. Your lifts are solid. But somewhere along the way, the definition disappeared. You know the muscle is under there — you've just never had the right protocol to reveal it. The Summer Shred was designed for exactly this situation: stripping fat from a body that already has a foundation worth showing.</p>
+      </div>
+      <div class="segment">
+        <h3>You're a former athlete who's lost the physique that matched your identity</h3>
+        <p>Rugby, football, athletics, combat sports — you used to look like what you were. Now your playing days are behind you but the weight crept on and the structure disappeared. You miss looking like an athlete. The Summer Shred brings that back without requiring you to train like you're 21 again.</p>
+      </div>
+      <div class="segment">
+        <h3>You've tried programs before and nothing stuck past week three</h3>
+        <p>Not because you're lazy — because the program wasn't built for you, and no one was checking whether it was actually working. You don't need more motivation. You need a system with built-in accountability, real-time adjustments, and someone who won't let you quietly give up on yourself.</p>
+      </div>
+      <div class="segment">
+        <h3>You want to invest in premium coaching, not a cheap template</h3>
+        <p>You've seen the $29/month apps and the mass-market PDF programs. You know what you get for that price. You're ready to invest in something that matches the seriousness of your goal — direct access to an experienced coach who treats your transformation like it matters. Because it does.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 14: URGENCY PANEL
+     ============================================ -->
+<section class="section urgency-section">
+  <div class="container">
+    <div class="eyebrow">Your decision</div>
+    <h2>Two paths. <span class="gold-gradient-text">Same 60 days either way.</span></h2>
+    <p class="urgency-text">
+      Sixty days from now, summer arrives regardless of what you decide today. The only question is whether you'll spend those days following a proven system with expert guidance — or doing the same thing that hasn't worked for the last twelve months.
+    </p>
+    <p class="urgency-text" style="font-weight: 500; color: var(--white);">
+      Here's what's real: intake for the Summer Shred is limited because every client works directly with Greg. This isn't artificial scarcity — it's a bandwidth constraint. When spots fill, intake closes until the next round.
+    </p>
+    <p class="urgency-text">
+      But the bigger picture is simpler than that. Every week you wait is a week of results you don't get back. The muscle is there. The work ethic is there. The only missing piece is the system.
+    </p>
+    <div class="eyebrow" style="margin-bottom: 24px;">Today is the day you decide to:</div>
+    <ul class="urgency-bullets">
+      <li><span class="check-icon">&#10070;</span> Stop guessing and start following a personalised protocol</li>
+      <li><span class="check-icon">&#10070;</span> Get an expert eye on your nutrition and training every single week</li>
+      <li><span class="check-icon">&#10070;</span> Join a community of athletes holding each other to a higher standard</li>
+      <li><span class="check-icon">&#10070;</span> Finally look like someone who trains as hard as you do</li>
+      <li><span class="check-icon">&#10070;</span> Arrive at summer in the best shape of your life</li>
+    </ul>
+    <a href="#book" class="cta-btn" style="margin-top: 20px;">Claim Your Strategy Call</a>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 15: FINAL CTA — VALUE STACK
+     ============================================ -->
+<section class="final-cta" id="book">
+  <div class="container">
+    <div class="eyebrow">Start here</div>
+    <h2>Book your free <span class="gold-gradient-text">strategy call with Greg</span></h2>
+    <p class="sub-headline">
+      20 minutes. Zero obligation. Complete clarity on your 60-day transformation.
+    </p>
+    <ul class="value-stack">
+      <li><span class="check-icon">&#10070;</span> Personalised assessment of your current physique and goals</li>
+      <li><span class="check-icon">&#10070;</span> Custom 60-day roadmap mapped to your specific fat-loss targets</li>
+      <li><span class="check-icon">&#10070;</span> Direct conversation with the founder — not a sales rep</li>
+      <li><span class="check-icon">&#10070;</span> Honest evaluation of what's achievable in your timeframe</li>
+      <li><span class="check-icon">&#10070;</span> Full onboarding within 48 hours if you decide to move forward</li>
+    </ul>
+    <!-- Replace href with your GHL funnel link -->
+    <a href="#" class="cta-btn">Book Your Strategy Call Now</a>
+    <p class="scarcity-note">Limited spots available — intake closes when capacity is reached</p>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 16: FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">KARVED</div>
+    <div class="gold-line"></div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="https://www.instagram.com/karved" target="_blank">Instagram</a>
+      <a href="mailto:greg@karved.com.au">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 KARVED FZ LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<div class="mobile-sticky-cta">
+  <a href="#book" class="cta-btn">Book Your Strategy Call</a>
+</div>
+
+<!-- ============================================
+     FAQ TOGGLE SCRIPT
+     ============================================ -->
+<script>
+document.querySelectorAll('.faq-question').forEach(function(q) {
+  q.addEventListener('click', function() {
+    var item = this.parentElement;
+    var wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(function(i) {
+      i.classList.remove('active');
+    });
+    if (!wasActive) {
+      item.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
