@@ -1065,7 +1065,19 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+// Calendly popup widget
+document.querySelectorAll('a[href*="calendly.com"]').forEach(function(link) {
+  link.removeAttribute('target');
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    Calendly.initPopupWidget({url: 'https://calendly.com/karvedhq/consultation-call'});
+  });
+});
 </script>
+
+<!-- Calendly widget CSS & JS -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 </body>
 </html>
