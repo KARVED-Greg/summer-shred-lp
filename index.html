@@ -492,15 +492,34 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 .guarantee-box h3 { font-size: 22px; margin-bottom: 24px; line-height: 1.3; }
 .guarantee-box p { font-size: 16px; line-height: 1.7; color: var(--text-body); margin-bottom: 12px; }
 
-/* ========== FINAL CTA — Navy ========== */
-.final-cta {
-  text-align: center; padding: 120px 0;
-  background: var(--navy);
+/* ========== BOOKING — Cream with embedded calendar ========== */
+.booking-section { background: var(--cream); text-align: center; }
+.booking-section .container { max-width: 900px; }
+.booking-section h2 { margin-bottom: 16px; }
+.booking-intro {
+  font-size: 17px; color: var(--text-body);
+  max-width: 600px; margin: 0 auto 48px; line-height: 1.7;
 }
-.final-cta .label { color: var(--gold-light); }
-.final-cta h2 { margin-bottom: 16px; color: #FFFFFF; }
-.final-cta .sub { font-size: 17px; color: var(--text-light); max-width: 520px; margin: 0 auto 36px; }
-.final-cta .note { font-size: 13px; color: var(--text-light-mid); margin-top: 20px; }
+.booking-embed {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+.booking-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  min-height: 720px;
+  border-radius: 12px;
+}
+.booking-note {
+  font-size: 13px; color: var(--gold); font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-top: 32px;
+}
 
 /* ========== FOOTER — Navy ========== */
 .footer {
@@ -553,7 +572,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
     <a href="#included">What's Included</a>
     <a href="#greg">Meet Greg</a>
   </div>
-  <a href="https://calendly.com/karvedhq/consultation-call" target="_blank" class="nav-cta">Book a Call</a>
+  <a href="#book" class="nav-cta">Book a Call</a>
   <button class="nav-hamburger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -561,7 +580,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 
 <div class="mobile-menu">
   <button class="mobile-menu-close" onclick="this.parentElement.classList.remove('open')">&times;</button>
-  <a href="https://calendly.com/karvedhq/consultation-call" target="_blank" class="mobile-menu-cta nav-cta">Book a Call</a>
+  <a href="#book" class="mobile-menu-cta nav-cta">Book a Call</a>
   <a href="#results" onclick="this.closest('.mobile-menu').classList.remove('open')">Results</a>
   <a href="#challenge" onclick="this.closest('.mobile-menu').classList.remove('open')">Challenge</a>
   <a href="#included" onclick="this.closest('.mobile-menu').classList.remove('open')">What's Included</a>
@@ -587,7 +606,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
         The Summer Shred is a 60-day transformation program built for men who already have the foundation. You just need the structure, accountability, and expert support to reveal the potential you've got hidden.
       </p>
       <div class="hero-cta-row">
-        <a href="https://calendly.com/karvedhq/consultation-call" target="_blank" class="btn btn-gold btn-arrow">Book a Free Call</a>
+        <a href="#book" class="btn btn-gold btn-arrow">Book a Free Call</a>
       </div>
       <p style="font-size:14px; color:var(--gold-light); font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-top:12px;">Only 10 spots — Applications close May 10th</p>
       <div class="prize-title">
@@ -729,7 +748,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 <div class="mid-cta-navy">
   <div class="container">
     <p>Ready to start your transformation?</p>
-    <a href="https://calendly.com/karvedhq/consultation-call" target="_blank" class="btn btn-gold btn-arrow">Book a Free Call</a>
+    <a href="#book" class="btn btn-gold btn-arrow">Book a Free Call</a>
   </div>
 </div>
 
@@ -870,7 +889,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 <div class="mid-cta-navy">
   <div class="container">
     <p>Ready to find your approach?</p>
-    <a href="https://calendly.com/karvedhq/consultation-call" target="_blank" class="btn btn-gold btn-arrow">Book a Free Call</a>
+    <a href="#book" class="btn btn-gold btn-arrow">Book a Free Call</a>
   </div>
 </div>
 
@@ -1005,17 +1024,17 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 </section>
 
 <!-- =============================================
-     FINAL CTA — Navy
+     BOOKING — Cream with embedded HighLevel calendar
      ============================================= -->
-<section class="final-cta" id="book">
+<section class="section booking-section" id="book">
   <div class="container">
-    <div class="label">Start here</div>
-    <h2>Book your free call with Greg</h2>
-    <p class="sub">20 minutes. Zero obligation. Complete clarity on your 60-day transformation.</p>
-    <!-- Replace href with your Calendly link -->
-    <a href="https://calendly.com/karvedhq/consultation-call" target="_blank" class="btn btn-gold btn-arrow">Book Your Free Call Now</a>
-    <p class="note" style="font-weight:600; font-size:16px;">Only 10 spots available — applications close May 10th</p>
-    <p class="note" style="margin-top:4px;">Intake closes when capacity is reached. Don't wait.</p>
+    <div class="label" style="text-align:center;">On the fence?</div>
+    <h2>Want to talk it through?</h2>
+    <p class="booking-intro">If you'd like to discuss how to make the Summer Shred work for you, your goals, and your schedule, book a free 20-minute call with Greg. No pressure, just a conversation.</p>
+    <div class="booking-embed">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/LME0BL3Li8w4gRe9Jg0X" scrolling="no" id="LME0BL3Li8w4gRe9Jg0X_1777796545930"></iframe>
+    </div>
+    <p class="booking-note">Only 10 spots — applications close May 10th</p>
   </div>
 </section>
 
@@ -1034,7 +1053,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 </footer>
 
 <div class="mobile-sticky">
-  <a href="https://calendly.com/karvedhq/consultation-call" target="_blank" class="btn btn-gold">Book a Call</a>
+  <a href="#book" class="btn btn-gold">Book a Call</a>
 </div>
 
 <script>
@@ -1065,19 +1084,10 @@ window.addEventListener('scroll', function() {
     }
   });
 });
-// Calendly popup widget
-document.querySelectorAll('a[href*="calendly.com"]').forEach(function(link) {
-  link.removeAttribute('target');
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    Calendly.initPopupWidget({url: 'https://calendly.com/karvedhq/consultation-call'});
-  });
-});
 </script>
 
-<!-- Calendly widget CSS & JS -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- HighLevel/LeadConnector booking widget auto-resize -->
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 
 </body>
 </html>
