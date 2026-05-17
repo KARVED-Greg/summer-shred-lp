@@ -31,6 +31,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id], div[id] { scroll-margin-top: 80px; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -83,25 +84,68 @@ body {
 }
 .nav-hamburger span { width: 22px; height: 2px; background: #FFFFFF; transition: all 0.3s ease; }
 
+/* Mobile drawer (left-side slide-in) */
+.mobile-menu-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55);
+  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  z-index: 1099;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mobile-menu-backdrop.open { opacity: 1; pointer-events: auto; }
 .mobile-menu {
-  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(13, 17, 41, 0.98); z-index: 999;
-  flex-direction: column; padding: 80px 32px 40px;
+  position: fixed; top: 0; bottom: 0; left: 0;
+  width: min(320px, 85vw);
+  background: var(--navy);
+  border-right: 1px solid var(--border-light-dark);
+  box-shadow: 4px 0 32px rgba(0,0,0,0.4);
+  z-index: 1100;
+  display: flex; flex-direction: column;
+  padding: 20px 20px 28px;
+  transform: translateX(-100%);
+  transition: transform 0.32s ease;
+  overflow-y: auto;
 }
-.mobile-menu.open { display: flex; }
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light-dark);
+  margin-bottom: 16px;
+}
+.mobile-menu-logo {
+  font-family: 'Norwester', sans-serif; font-size: 18px;
+  text-transform: uppercase; color: #FFFFFF; letter-spacing: 2px;
+  text-decoration: none;
+}
 .mobile-menu-close {
-  position: absolute; top: 20px; left: 32px;
-  background: none; border: none; color: #FFFFFF; font-size: 28px; cursor: pointer; padding: 8px;
+  background: none; border: none; color: #FFFFFF;
+  font-size: 28px; cursor: pointer; padding: 4px 10px; line-height: 1;
 }
-.mobile-menu-cta { position: absolute; top: 18px; right: 32px; }
-.mobile-menu a {
+.mobile-menu-nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.mobile-menu-nav a {
   display: block; color: #FFFFFF; text-decoration: none;
-  font-size: 18px; font-weight: 500; padding: 16px 20px; border-radius: 8px; transition: background 0.2s;
+  font-size: 16px; font-weight: 500;
+  padding: 14px 12px; border-radius: 8px;
+  transition: background 0.2s;
 }
-.mobile-menu a:first-of-type { background: linear-gradient(135deg, #C4A44A, #E8D5A3); color: var(--navy); font-weight: 600; border-radius: 40px; }
-.mobile-menu a:hover { background: rgba(255,255,255,0.06); }
+.mobile-menu-nav a:hover, .mobile-menu-nav a:active {
+  background: rgba(255,255,255,0.06);
+}
+.mobile-menu-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-top: 16px; padding: 14px 22px;
+  background: linear-gradient(135deg, #C4A44A, #E8D5A3);
+  color: var(--navy);
+  font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  text-decoration: none; border-radius: 40px;
+}
+body.menu-open { overflow: hidden; }
 
 @media (max-width: 860px) {
+  .nav { padding: 0 16px; }
   .nav-links { display: none; }
   .nav > .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
@@ -132,6 +176,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 .section-cream { background: var(--cream); }
 .section-cream-mid { background: var(--cream-mid); }
 .section-navy { background: var(--navy); }
+@media (max-width: 600px) { .section { padding: 64px 0; } }
 .label {
   font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 12px;
   text-transform: uppercase; letter-spacing: 3px; color: var(--gold-light); margin-bottom: 20px;
@@ -251,6 +296,9 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 }
 @media (max-width: 600px) {
   .cred-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+}
+@media (max-width: 460px) {
+  .cred-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ========== TRANSFORMATIONS — Cream ========== */
@@ -515,6 +563,9 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
   min-height: 720px;
   border-radius: 12px;
 }
+@media (max-width: 600px) {
+  .booking-embed iframe { min-height: 640px; }
+}
 .booking-note {
   font-size: 13px; color: var(--gold); font-weight: 600;
   letter-spacing: 1.5px; text-transform: uppercase;
@@ -573,19 +624,26 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
     <a href="#greg">Meet Greg</a>
   </div>
   <a href="#book" class="nav-cta">Book a Call</a>
-  <button class="nav-hamburger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Menu">
+  <button class="nav-hamburger" onclick="openMenu()" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<div class="mobile-menu">
-  <button class="mobile-menu-close" onclick="this.parentElement.classList.remove('open')">&times;</button>
-  <a href="#book" class="mobile-menu-cta nav-cta">Book a Call</a>
-  <a href="#results" onclick="this.closest('.mobile-menu').classList.remove('open')">Results</a>
-  <a href="#challenge" onclick="this.closest('.mobile-menu').classList.remove('open')">Challenge</a>
-  <a href="#included" onclick="this.closest('.mobile-menu').classList.remove('open')">What's Included</a>
-  <a href="#greg" onclick="this.closest('.mobile-menu').classList.remove('open')">Meet Greg</a>
-</div>
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu-backdrop" onclick="closeMenu()"></div>
+<aside class="mobile-menu" aria-label="Mobile navigation">
+  <div class="mobile-menu-header">
+    <a href="#top" class="mobile-menu-logo" onclick="closeMenu()">KARVED</a>
+    <button class="mobile-menu-close" onclick="closeMenu()" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="mobile-menu-nav">
+    <a href="#results" onclick="closeMenu()">Results</a>
+    <a href="#challenge" onclick="closeMenu()">Challenge</a>
+    <a href="#included" onclick="closeMenu()">What's Included</a>
+    <a href="#greg" onclick="closeMenu()">Meet Greg</a>
+  </nav>
+  <a href="#book" class="mobile-menu-cta" onclick="closeMenu()">Book a Call</a>
+</aside>
 
 <!-- =============================================
      HERO — Navy with background image
@@ -659,7 +717,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
       <!-- TRANSFORMATION 1 — 4kg lost -->
       <div class="transform-row">
         <div class="transform-image-col">
-          <img src="transform 1.1.jpeg" alt="Client transformation — lost 4kg" style="width:100%;height:100%;object-fit:cover;">
+          <img src="transform 1.1.jpeg" alt="Client transformation — lost 4kg" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="transform-text-col">
           <div class="name">Client Result</div>
@@ -671,7 +729,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
       <!-- TRANSFORMATION 2 — 15.1kg lost -->
       <div class="transform-row reverse">
         <div class="transform-image-col">
-          <img src="Transform 2.2.jpeg" alt="Client transformation — lost 15.1kg" style="width:100%;height:100%;object-fit:cover;">
+          <img src="Transform 2.2.jpeg" alt="Client transformation — lost 15.1kg" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="transform-text-col">
           <div class="name">Client Result</div>
@@ -683,7 +741,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
       <!-- TRANSFORMATION 3 — 20.1kg lost -->
       <div class="transform-row">
         <div class="transform-image-col">
-          <img src="Transform 3.3.jpeg" alt="Client transformation — lost 20.1kg" style="width:100%;height:100%;object-fit:cover;">
+          <img src="Transform 3.3.jpeg" alt="Client transformation — lost 20.1kg" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="transform-text-col">
           <div class="name">Client Result</div>
@@ -695,7 +753,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
       <!-- TRANSFORMATION 4 — 10kg lost -->
       <div class="transform-row reverse">
         <div class="transform-image-col">
-          <img src="Transform 4.4.jpeg" alt="Client transformation — lost 10kg" style="width:100%;height:100%;object-fit:cover;">
+          <img src="Transform 4.4.jpeg" alt="Client transformation — lost 10kg" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="transform-text-col">
           <div class="name">Client Result</div>
@@ -707,7 +765,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
       <!-- TRANSFORMATION 5 — 13.5kg lost -->
       <div class="transform-row">
         <div class="transform-image-col">
-          <img src="Transform 5.5.jpeg" alt="Client transformation — lost 13.5kg" style="width:100%;height:100%;object-fit:cover;">
+          <img src="Transform 5.5.jpeg" alt="Client transformation — lost 13.5kg" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="transform-text-col">
           <div class="name">Client Result</div>
@@ -719,7 +777,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
       <!-- TRANSFORMATION 6 — 10kg lost -->
       <div class="transform-row reverse">
         <div class="transform-image-col">
-          <img src="Transform 6.6.jpeg" alt="Client transformation — lost 10kg" style="width:100%;height:100%;object-fit:cover;">
+          <img src="Transform 6.6.jpeg" alt="Client transformation — lost 10kg" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="transform-text-col">
           <div class="name">Client Result</div>
@@ -731,7 +789,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
       <!-- TRANSFORMATION 7 — 7.6kg lost -->
       <div class="transform-row">
         <div class="transform-image-col">
-          <img src="Transform 7.7.jpeg" alt="Client transformation — lost 7.6kg" style="width:100%;height:100%;object-fit:cover;">
+          <img src="Transform 7.7.jpeg" alt="Client transformation — lost 7.6kg" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="transform-text-col">
           <div class="name">Client Result</div>
@@ -902,7 +960,7 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
     <h2>I built this because I've lived it</h2>
     <div class="story-grid">
       <div class="founder-image">
-        <img src="hero.jpeg" alt="Greg Lingard" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        <img src="hero.jpeg" alt="Greg Lingard" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
       </div>
       <div class="story-text">
         <p>
@@ -1057,6 +1115,17 @@ h2 { font-size: clamp(32px, 4vw, 40px); line-height: 1.1; margin-bottom: 20px; }
 </div>
 
 <script>
+function openMenu() {
+  document.querySelector('.mobile-menu').classList.add('open');
+  document.querySelector('.mobile-menu-backdrop').classList.add('open');
+  document.body.classList.add('menu-open');
+}
+function closeMenu() {
+  document.querySelector('.mobile-menu').classList.remove('open');
+  document.querySelector('.mobile-menu-backdrop').classList.remove('open');
+  document.body.classList.remove('menu-open');
+}
+
 document.querySelectorAll('.faq-q').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var item = this.parentElement;
@@ -1084,6 +1153,19 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+
+// Hide mobile sticky CTA when the booking section is on screen (avoids overlapping the calendar controls)
+var bookSection = document.getElementById('book');
+var sticky = document.querySelector('.mobile-sticky');
+if (bookSection && sticky && 'IntersectionObserver' in window) {
+  var stickyObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      sticky.style.opacity = entry.isIntersecting ? '0' : '1';
+      sticky.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+    });
+  }, { threshold: 0.15 });
+  stickyObserver.observe(bookSection);
+}
 </script>
 
 <!-- HighLevel/LeadConnector booking widget auto-resize -->
